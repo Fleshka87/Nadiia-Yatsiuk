@@ -1,15 +1,19 @@
 package details;
 
 public class Engine {
-
-    private double power;
+    private int power;
     private String company;
 
-    public double getPower() {
+    public Engine(int power, String company) {
+        this.power = power;
+        this.company = company;
+    }
+
+    public int getPower() {
         return power;
     }
 
-    public void setPower(double power) {
+    public void setPower(int power) {
         this.power = power;
     }
 
@@ -23,6 +27,9 @@ public class Engine {
 
     @Override
     public String toString() {
-        return "power"+ power+"company"+company;
+        return "Engine{" +
+                "power=" + power +
+                ", company='" + company + '\'' +
+                '}';
     }
 }
