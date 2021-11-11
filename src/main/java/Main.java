@@ -1,9 +1,6 @@
 package main.java;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -33,28 +30,29 @@ public class Main {
         map.put("apple", "fruit");
         map.put("orange", "fruit");
         map.put("tomato", "vegetable");
-        map.put("potato", "vegetable");
+        map.put("potato", "potato");
         map.put("strawberry", "fruit");
         map.put("cabbage", "vegetable");
-        map.put("lime", "fruit");
+        map.put("lime", "citrus");
         map.put("lettuce", "vegetable");
         map.put("cherry", "fruit");
         map.put("zucchini", "vegetable");
 
 
-        Set<Map.Entry<String, String>> setValue= map.entrySet();
+        Set<String> setValue= new HashSet<>();
 
         Iterator <Map.Entry<String, String>> itr = map.entrySet().iterator();
+
         while (itr.hasNext()) {
             Map.Entry<String, String> entry = itr.next();
             String type = entry.getValue();
 
-            if (type.equals("fruit"))
-                itr.remove();
+//
+            if(!setValue.add(type)){
 
-            System.out.println(map.entrySet());
-
+            itr.remove();}g
         }
+        System.out.println(map);
 
 
 
