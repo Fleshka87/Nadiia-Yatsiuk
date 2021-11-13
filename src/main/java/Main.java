@@ -31,7 +31,7 @@ public class Main {
         map.put("orange", "fruit");
         map.put("tomato", "vegetable");
         map.put("potato", "potato");
-        map.put("strawberry", "fruit");
+        map.put("strawberry", "GHTYY");
         map.put("cabbage", "vegetable");
         map.put("lime", "citrus");
         map.put("lettuce", "vegetable");
@@ -48,9 +48,12 @@ public class Main {
             String type = entry.getValue();
 
 //
-            if(!setValue.add(type)){
+           // if(!setValue.add(type)) перегляньте умову if. у я придумала сама)
+            // просто я написала ту умову яку ви порадали але до кінця її не розуміла. А цю розумію)))
 
-            itr.remove();}g
+            if (setValue.add(type)!=setValue.contains(type)){
+
+            itr.remove();}
         }
         System.out.println(map);
 
