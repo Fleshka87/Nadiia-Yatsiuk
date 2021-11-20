@@ -50,15 +50,9 @@ public class Main {
 //
             if(!setValue.add(type)){
 
-            itr.remove();}g
+            itr.remove();}
         }
         System.out.println(map);
-
-
-
-
-
-
 
             }
         }

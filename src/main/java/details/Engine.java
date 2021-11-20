@@ -1,5 +1,7 @@
 package details;
 
+import org.testng.annotations.Test;
+
 public class Engine {
     private int power;
     private String company;
@@ -32,4 +34,5 @@ public class Engine {
                 ", company='" + company + '\'' +
                 '}';
     }
+
 }

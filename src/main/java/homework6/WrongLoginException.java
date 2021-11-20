@@ -1,4 +1,4 @@
-package main.java.homework6;
+package homework6;
 
 public class WrongLoginException extends Exception{
 
