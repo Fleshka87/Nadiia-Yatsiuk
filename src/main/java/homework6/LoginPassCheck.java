@@ -1,4 +1,6 @@
-package main.java.homework6;
+package homework6;
+
+import main.java.homework6.WrongPasswordException;
 
 public class LoginPassCheck {
 
