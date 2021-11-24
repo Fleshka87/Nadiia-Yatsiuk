@@ -29,22 +29,19 @@ public class Selemium {
         //driver.manage().window().maximize();
     }
 
-    @Test
-    public void firstTest() throws InterruptedException {
-        driver.get(URL);
-        System.out.println(driver.getCurrentUrl());
-        String url = driver.getWindowHandle();
-        WebElement joinButton = driver.findElement(By.xpath("//*[@class='home-banner']"));
-        joinButton.click();
-        driver.getCurrentUrl();
-        String url2 = driver.getWindowHandle();
-        List<String>urlList= new ArrayList<String>();
-        urlList.add(url);
-        urlList.add(url2);
-
-        System.out.println(driver.getWindowHandles());
-
-        Assert.assertEquals(urlList.size(), 2);
+  //  @Test
+//    public void firstTest() throws InterruptedException {
+//        driver.get(URL);
+//        System.out.println(driver.getCurrentUrl());
+//        String url = driver.getWindowHandle();
+//        WebElement joinButton = driver.findElement(By.xpath("//*[@class='home-banner']"));
+//        joinButton.click();
+//        driver.getCurrentUrl();
+//        String url2 = driver.getWindowHandle();
+//        List<String>urlList= new ArrayList<String>();
+//        urlList.add(url);
+//        urlList.add(url2);
+//        Assert.assertEquals(urlList.size(), 2);
 
 
    // }
