@@ -1,4 +1,4 @@
-package HomeWork12;
+package HomeWork12Update;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
