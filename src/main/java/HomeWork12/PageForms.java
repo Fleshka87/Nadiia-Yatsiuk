@@ -1,4 +1,4 @@
-package HomeWork12Update;
+package HomeWork12;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
