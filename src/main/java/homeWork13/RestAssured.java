@@ -1,5 +1,6 @@
 package homeWork13;
 
+import com.google.gson.Gson;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -14,11 +15,12 @@ import static org.hamcrest.Matchers.lessThan;
 
 
 public class RestAssured {
-    public  String baseUrl ="https://swapi.dev/api/";
+    public  String baseUrl ="https://petstore.swagger.io/v2";
+
     RequestSpecification requestSpecification = new RequestSpecBuilder()
             .setBaseUri(baseUrl)
             .setContentType(ContentType.JSON)
-            .setBasePath("planets/1")
+
             .build();
 
     ResponseSpecification responseSpecification = new ResponseSpecBuilder()
@@ -27,16 +29,30 @@ public class RestAssured {
             .build();
 
 
-
     @Test
     public void restAssure(){
+
+        User user1 = new User();
+        user1.setId(0);
+        user1.setUsername("string");
+        user1.setFirstName("string");
+        user1.setEmail("string");
+        user1.setPassword("string");
+        user1.setPhone("string");
+        user1.setUserStatus(0);
+
+        String jsonObject = new Gson().toJson(user1);
+
         given()
                 .spec(requestSpecification)
+                .body(jsonObject)
         .when()
-                .get()
+                .post("/user")
         .then()
                 .spec(responseSpecification)
-                .body("name", equalTo("Tatooine"));
+                .body("message", equalTo("9223372036854775807"));// без переврки тест проходить, а з перевіркою цифри не співпадають
+
+
     }
 
 }
